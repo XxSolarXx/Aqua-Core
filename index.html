@@ -67,22 +67,12 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            margin-left: -50px; /* Moves the image and glow to the left */
+            margin-left: -50px; /* Moves the image to the left */
         }
         .image-container img {
             width: 400px; /* Makes the image larger */
             height: auto;
             border-radius: 50%;
-            z-index: 1;
-        }
-        .image-container::before {
-            content: '';
-            position: absolute;
-            width: 500px; /* Larger than the image for the ring effect */
-            height: 500px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(86, 204, 242, 0.5), transparent);
-            z-index: 0;
         }
     </style>
 </head>
