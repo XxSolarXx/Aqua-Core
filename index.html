@@ -66,12 +66,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
         .image-container img {
-            width: 300px;
+            width: 400px; /* Makes the image larger */
             height: auto;
             border-radius: 50%;
-            box-shadow: 0 0 20px #56ccf2;
+            z-index: 1;
+        }
+        .image-container::before {
+            content: '';
+            position: absolute;
+            width: 500px; /* Larger than the image for the ring effect */
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(86, 204, 242, 0.5), transparent);
+            z-index: 0;
         }
     </style>
 </head>
